@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: local
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+server:
+  servlet:
+    context-path: /api
+  error:
+    include-message: ALWAYS
+
+app:
+  auth:
+    accessTokenSecret: 7C7C58401E3411ED861D0242AC120002
+    refreshTokenSecret: F2D2FA2X4F2F478FB1D5689b4C948D6X
+    accessTokenExpiration: 86400000 # In milliseconds
+    refreshTokenExpiration: 2592000000
+
+mongock:
+  change-logs-scan-package:
+    - io.readmyblog.readmyblogapi.migration
+
+baseUrl: http://localhost:3000

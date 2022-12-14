@@ -1,0 +1,20 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://rmbsuperadmin:rhm8auNKnmWwI1Yq@readmyblog-dev.bpou66j.mongodb.net/readmyblog?retryWrites=true&w=majority
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 432481292664-qp4nnsgfiuh8o8o2h07emsfu5kdjbrsr.apps.googleusercontent.com
+            clientSecret: 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
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+
+app:
+  oauth2:
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2/redirect
